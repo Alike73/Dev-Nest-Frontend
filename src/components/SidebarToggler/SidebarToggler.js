@@ -15,18 +15,20 @@ const SidebarToggler = () => {
     const menuText = isOpen ? "CLOSE" : "MENU";
 
     return (
-        <div className='sidebar_toggler_wrapper'>
-            <p className='mb-0'>{ menuText }</p>
+        <div 
+            className={ `sidebar_toggler_wrapper ${ isOpen ? "open" : "" }` } 
+            onClick={ handleToggleSidebar }
+        >
+            <p className='mb-0 fw-bold'>{ menuText }</p>
             <svg 
                 className={ ` ham hamRotate ham1 sidebar_toggler ${ isOpen ? "active" : "" } ` } 
                 viewBox="0 0 100 100" 
-                width="80" 
+                width={75} 
                 data-bs-toggle="collapse" 
                 data-bs-target="#myNavItems" 
                 aria-controls="myNavItems" 
                 aria-expanded="false" 
                 aria-label="Toggle navigation"
-                onClick={ handleToggleSidebar }
             >
                 <path
                         className="line top"

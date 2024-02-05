@@ -1,53 +1,32 @@
 import { useSelector } from "react-redux";
 import { getIsOpen } from "../../Redux/SidebarSlice";
-
-
+import SidebarLinkItem from "./SidebarLinkItem";
+import { useEffect, useState } from "react";
+import dataSidebar from "../../data/DataSidebar";
 
 
 const Sidebar = () => {
 
     const isOpen = useSelector(getIsOpen);
+    const [sidebarLinks, setSidebarLinks] = useState([]);
 
-    // d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar
+    useEffect(() => {
+        setSidebarLinks(dataSidebar);
+    }, []);
 
     return (
-        <div className={ `d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar ${ isOpen ? "open" : "" }` }>
-            <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-            
-            <span className="fs-4">Sidebar</span>
-            </a>
+        <div className={ `d-flex flex-column flex-shrink-0 p-3 sidebar ${ isOpen ? "open" : "" }` }>
+            <div className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white">
+                <span className="fs-4">Sidebar</span>
+            </div>
             <hr />
             <ul className="nav nav-pills flex-column mb-auto">
-                <li className="nav-item my-3">
-                    <a href="#abc" className="nav-link active" aria-current="page">
-                    
-                    Home
-                    </a>
-                </li>
-                <li className="nav-item my-3">
-                    <a href="#abc" className="nav-link text-white">
-                    
-                    Dashboard
-                    </a>
-                </li>
-                <li className="nav-item my-3">
-                    <a href="#abc" className="nav-link text-white">
-                    
-                    Orders
-                    </a>
-                </li>
-                <li className="nav-item my-3">
-                    <a href="#abc" className="nav-link text-white">
-                    
-                    Products
-                    </a>
-                </li>
-                <li className="nav-item my-3">
-                    <a href="#abc" className="nav-link text-white">
-                    
-                    Customers
-                    </a>
-                </li>
+                { sidebarLinks.map((item) => <SidebarLinkItem 
+                    key = { item.id }
+                    routeTo = { item.routeTo }
+                    icon = { item.icon }
+                    title = { item.title } 
+                />)}
             </ul>
             <hr />
             <div className="dropup">
@@ -55,7 +34,7 @@ const Sidebar = () => {
                     <img src="https://github.com/mdo.png" alt="user" width="32" height="32" className="rounded-circle me-2" />
                     <strong>mdo</strong>
                 </a>
-                <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
+                <ul className="dropdown-menu text-small">
                     <li><a className="dropdown-item" href="#abc">New project...</a></li>
                     <li><a className="dropdown-item" href="#abc">Settings</a></li>
                     <li><a className="dropdown-item" href="#abc">Profile</a></li>

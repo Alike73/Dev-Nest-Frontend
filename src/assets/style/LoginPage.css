@@ -1,0 +1,65 @@
+
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='737' preserveAspectRatio='none' viewBox='0 0 1440 737'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3crect width='1440' height='737' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M1043.867%2c647.148C1072.751%2c647.784%2c1102.883%2c638.486%2c1117.408%2c613.512C1131.997%2c588.428%2c1124.342%2c558.086%2c1110.497%2c532.584C1095.82%2c505.55%2c1074.627%2c477.841%2c1043.867%2c478.053C1013.33%2c478.263%2c992.784%2c506.338%2c978.805%2c533.489C966.218%2c557.936%2c962.068%2c586.529%2c975.728%2c610.393C989.469%2c634.398%2c1016.214%2c646.539%2c1043.867%2c647.148' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1004.7624767584476 43.38196513246856L812.0230385698104-22.9835456058158 938.3969660201633 236.12140332110576z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1464.7746612642513 526.4670790499925L1319.5682222916355 452.48070296298516 1245.5818462046282 597.687141935601 1390.788285177244 671.6735180226083z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-88.67454700125867 66.4308630747487L56.39955513536515 211.50496521137245 201.4736572719889 66.43086307474864 56.39955513536509-78.64323906187512z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-49.868%2c84.89C-33.197%2c83.965%2c-17.877%2c76.724%2c-8.692%2c62.78C1.623%2c47.121%2c6.986%2c27.768%2c-1.094%2c10.847C-10.273%2c-8.375%2c-28.569%2c-23.7%2c-49.868%2c-23.446C-70.839%2c-23.196%2c-86.603%2c-6.412%2c-96.668%2c11.987C-106.259%2c29.52%2c-110.599%2c51.019%2c-99.803%2c67.837C-89.619%2c83.701%2c-68.691%2c85.935%2c-49.868%2c84.89' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M567.020919395123 204.75581654745463L483.9152705783573 282.2530878123472 561.4125418432498 365.35873662911285 644.5181906600155 287.8614653642203z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M392.789800705798 682.7631244792409L531.7083009141364 620.9126232664488 330.9392994930059 543.8446242709024z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M515.9652750470693 666.9112534104063L665.5783227342088 680.0006989985944 529.0547206352575 517.2982057232668z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M561.1067334097544 698.0392756697404L633.9696195369202 761.3780162590996 692.5462873573761 620.4143167736712z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='737' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero_login {
+    width: 100%;
+    height: fit-content;
+}
+
+/* ---Login-Btn--- */
+.link {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--c-label-sm);
+    text-decoration: none;
+    outline: none;
+    border: none;
+    position: relative;
+    transition: var(--transition);
+}
+.link span, 
+.link .bi-arrow-right {
+    position: relative;
+    display: inline-block;
+    transition: var(--transition);
+}
+.link span::first-letter {
+    color: var(--c-coral);
+}
+.link:hover span::first-letter {
+    color: var(--c-label-sm);
+}
+.link:hover span {
+    color: var(--c-light);
+}
+.bi-arrow-right {
+    transition: var(--transition);
+}
+.link .pink {
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    background-color: var(--c-blue-sm);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -0.65em;
+}
+.link:active {
+    outline: none;
+    border: none;
+    color: var(--c-light);
+}
+.link:hover .bi-arrow-right {
+    color: var(--c-coral);
+}
+

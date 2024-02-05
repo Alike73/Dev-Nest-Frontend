@@ -1,17 +1,14 @@
 import './App.css';
-import SidebarToggler from './components/SidebarToggler/SidebarToggler';
-import Sidebar from './components/sidebar/Sidebar';
-import Home from './pages/home/Home';
-
+import LoginPage from './pages/login/LoginPage';
+// import Main from './pages/main/Main';
 
 
 function App() {
 
   return (
     <div className="App">
-      <SidebarToggler />
-      <Sidebar />
-      <Home />
+      <LoginPage />
+      {/* <Main /> */}
     </div>
   );
 }

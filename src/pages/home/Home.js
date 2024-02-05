@@ -5,7 +5,7 @@ import dividerImg from "../../assets/images/divider-round-bottom.svg";
 const Home = () => {
 
     return (
-        <div className="home">
+        <div className="home page">
             <div className="hero">
                 <div className="container col-xxl-8 px-4 pt-5">
                     <Hero />
