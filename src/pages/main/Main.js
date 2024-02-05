@@ -8,6 +8,7 @@ import JavaScriptPage from "../javascript/JavaScriptPage";
 import ReactPage from "../react/ReactPage";
 import NodeJsPage from "../nodejs/NodeJsPage";
 import MongoDBPage from "../mongodb/MongoDBPage";
+import GoHome from "../../components/goHome/GoHome";
 
 
 const Main = () => {
@@ -23,6 +24,7 @@ const Main = () => {
                         path="/"
                         element={
                             <>
+                            <GoHome />
                             <Sidebar />
                             <Outlet />
                             </>

@@ -43,6 +43,8 @@ body {
   --c-orange-md: hsl(33, 86%, 53%);
   --c-coral: hsl(2, 100%, 66%);
   --c-blue-sm: hsl(243, 100%, 69%);
+  --c-green: hsl(128, 49%, 49%);
+  --c-turquoise: rgb(8, 231, 220);
 
   --c-grey-md: hsl(206, 8%, 38%);
 
