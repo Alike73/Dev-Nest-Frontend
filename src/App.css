@@ -49,6 +49,9 @@
   border-bottom-left-radius: var(--l-md2);
   padding-left: var(--l-md2);
 }
+.sidebar_toggler_wrapper:hover {
+  cursor: pointer;
+}
 .sidebar_toggler {
   border: none;
 }
