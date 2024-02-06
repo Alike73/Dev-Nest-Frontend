@@ -30,6 +30,61 @@
   color: var(--c-turquoise);
 }
 
+/* ---Scroll-Top/Bottom--- */
+.top-to-btm{
+  position: relative;
+}
+.icon-position{
+  position: fixed;
+  bottom: 40px;
+  right: 16px;
+  z-index: 200;
+}
+.icon-position2{
+  position: fixed;
+  top: 120px;
+  right: 16px;
+  z-index: 200;
+}
+.icon-style{
+  background-color: #3E54AC;
+  border: 2px solid var(--c-label-sm);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color: var(--c-label-sm);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: movebtn 3s ease-in-out infinite;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all .5s ease-in-out;
+}
+.icon-style:hover{
+  animation: none;
+  background: var(--c-label-sm);
+  color: #551B54;
+  border: 2px solid var(--c-orange-md);
+}
+@keyframes movebtn {
+  0%{
+      transform: translateY(0px);
+  }
+  25%{
+      transform: translateY(20px);
+  }
+  50%{
+      transform: translateY(0px);
+  }
+  75%{
+      transform: translateY(-20px);
+  }
+  100%{
+      transform: translateY(0px);
+  }
+}
+
 /* ---Sidebar--- */
 .sidebar {
   width: 280px;
@@ -41,13 +96,13 @@
   translate: 280px 0;
   overflow-y: auto;
   background: var(--c-dark-sm);
-  z-index: 3;
   box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
     10px 10px 70px rgba(0, 0, 0, 0.25),
     inset 5px 5px 10px rgba(0, 0, 0, 0.5),
     inset 5px 5px 20px rgba(255, 255, 255, 0.2),
     inset -5px -5px 15px rgba(0, 0, 0, 0.75);
   transition: var(--transition-1);
+  z-index: 210;
 }
 .sidebar.open {
   translate: 0;
@@ -61,7 +116,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5;
+  z-index: 220;
 }
 .sidebar_toggler_wrapper p {
   color: var(--c-label);
@@ -284,7 +339,7 @@
   --rim-size: .02ch;
   --shadow-offset: .1ch;
   --shadow-blur: .1ch;
-  color: var(--c-dark);
+  color: var(--c-dark-md);
   font-size: 10vmin;
   letter-spacing: .075ch;
   text-shadow: calc(max(var(--rim-size), 1px)*var(--light-pos-x)) 
@@ -325,11 +380,107 @@
   filter: var(--img-shadow-dark);
 }
 
-.divider_bottom {
+.divider_bottom,
+.divider_rounded_top {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
+/* ---Pdf-Book-Search-Input--- */
+.input-wrapper {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+}
+
+.input {
+  border-style: none;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  outline: none;
+  border-radius: 50%;
+  transition: .5s ease-in-out;
+  background-color: var(--c-blue-sm);
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+              inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+              inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  padding-right: 40px;
+  color: var(--c-label-sm);
+}
+
+.input::placeholder,
+.input {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
+}
+
+.input::placeholder {
+  color: var(--c-label);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border-style: none;
+  border-radius: 50%;
+  pointer-events: painted;
+  background-color: transparent;
+  transition: .2s linear;
+}
+
+.icon:focus ~ .input,
+.input:focus {
+  box-shadow: none;
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 3px solid var(--c-blue-sm);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+/* ---Pdf-Book-Filter--- */
+@keyframes glow-btn {
+  0% {
+  border-color: #393;
+  box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+  }	
+  100% {
+  border-color: #6f6;
+  box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 2px 0 #000;
+  }
+}
+.book_category_btn {
+  border: 1px solid var(--c-turquoise);
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+              inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+              inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-1);
+}
+.book_category_btn:hover {
+  background-image: var(--filter-btn-bg);
+  border: 1px solid #393;
+  box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+  animation: glow-btn 800ms ease-out infinite alternate;
+  scale: 1.075;
+}
+
+/* ---Footer--- */
+.footer {
+  background: var(--c-grey);
+}
+/* ------------ */
 
 
 @media (width <= 1024px) {
@@ -337,7 +488,8 @@
   .hero_login h2 {
     font-size: 15vmin;
   }
-  .divider_bottom {
+  .divider_bottom,
+  .divider_rounded_top {
     position: relative;
     width: 100%;
     max-height: 70px;

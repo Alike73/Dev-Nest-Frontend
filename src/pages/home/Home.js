@@ -1,5 +1,6 @@
 import Hero from "../../components/homeHero/Hero";
 import dividerImg from "../../assets/images/divider-round-bottom.svg";
+import PDFLibrary from "../../components/pdfLibrary/PDFLibrary";
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
                 </div>
                 <img className="divider_bottom" src={ dividerImg } alt="divider-round-bottom" />
             </div>
+                <PDFLibrary />
         </div>
     )
 };

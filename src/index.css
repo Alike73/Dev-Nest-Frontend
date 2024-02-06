@@ -1,6 +1,7 @@
 @import "~normalize.css/normalize.css";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import "./assets/style/LoginPage.css";
+@import './assets/style/PdfBookCard.css';
 
 /* font-family: "Tilt Neon", sans-serif;
 font-family: "Nunito Sans", sans-serif; */
@@ -32,9 +33,12 @@ body {
 
   --bg-home-hero: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M213.65231553432005 219.45931771022427L287.8519811186582 176.6201208113264 186.4933529781423 86.7402208842681z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M304.78577907121013 412.52012269262826L221.79675783951097 372.04367254474437 181.32030769162714 455.0326937764435 264.30932892332623 495.5091439243274z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M218.487%2c167.632C233.526%2c168.323%2c247.187%2c159.43%2c254.972%2c146.544C263.05%2c133.174%2c265.65%2c116.285%2c257.599%2c102.899C249.745%2c89.841%2c233.724%2c86.06%2c218.487%2c85.883C202.846%2c85.701%2c185.206%2c88.21%2c177.769%2c101.971C170.539%2c115.349%2c179.371%2c130.513%2c187.385%2c143.437C194.804%2c155.401%2c204.424%2c166.985%2c218.487%2c167.632' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M449.35609410458744 545.6003377325109L507.6256357423869 535.3258453882515 463.07912640709816 453.05877910368207z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M162.146307999836 218.54399532100678L205.14808104820696 310.76159521741954 321.97359436864053 200.15013569665675z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1198.1605148695764 15.75242934518732L1233.4266390753887 112.6453092723388 1330.3195190025403 77.37918506652647 1295.0533947967278-19.513694860625012z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-12.021693351850253 20.843169521404675L47.281237628513004 154.03973330360418 180.4778014107125 94.73680232324091 121.17487043034924-38.45976145895858z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M850.294%2c103.435C868.299%2c103.268%2c885.625%2c95.168%2c894.717%2c79.626C903.896%2c63.937%2c902.657%2c44.728%2c893.985%2c28.753C884.858%2c11.94%2c869.409%2c-1.432%2c850.294%2c-2.205C829.896%2c-3.03%2c809.924%2c7.101%2c800.018%2c24.952C790.364%2c42.348%2c793.685%2c63.714%2c804.417%2c80.466C814.304%2c95.901%2c831.965%2c103.605%2c850.294%2c103.435' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M704.141417919508 191.82394704584433L751.5286618670488 118.85399035929164 618.3801048634493 84.25810278125684z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
 
+  --filter-btn-bg: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
   --c-dark: hsl(216, 28%, 7%);
   --c-dark-md: hsl(216, 28%, 7%);
   --c-dark-sm: hsl(212, 14%, 21%);
+  --c-dark-lg: hsl(0, 0%, 0%);
   --c-label: hsl(213, 9%, 58%);
   --c-label-lg: hsl(210, 11%, 71%);
   --c-label-md: hsl(216, 2%, 47%);
@@ -42,9 +46,11 @@ body {
   --c-light: hsl(0, 0%, 100%);
   --c-orange-md: hsl(33, 86%, 53%);
   --c-coral: hsl(2, 100%, 66%);
-  --c-blue-sm: hsl(243, 100%, 69%);
+  --c-blue-sm: rgb(105, 97, 255);
+  --c-grey: hsl(233, 23%, 34%);
+  --c-navy: hsl(211, 67%, 17%);
   --c-green: hsl(128, 49%, 49%);
-  --c-turquoise: rgb(8, 231, 220);
+  --c-turquoise: hsl(177, 93%, 47%);
 
   --c-grey-md: hsl(206, 8%, 38%);
 
@@ -73,4 +79,24 @@ body {
   --text-shadow: 0px 4px 3px rgb(0 0 0 / 40%), 0px 8px 13px 
               rgb(0 0 0 / 10%), 0px 18px 23px 
               rgb(0 0 0 / 10%);
+}
+
+/* ---Scrollbar-Style--- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  /* border-radius: 10px; */
+  background: #2B4865;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  /* border-radius: 10px; */
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
 }

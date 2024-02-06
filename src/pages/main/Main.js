@@ -9,12 +9,16 @@ import ReactPage from "../react/ReactPage";
 import NodeJsPage from "../nodejs/NodeJsPage";
 import MongoDBPage from "../mongodb/MongoDBPage";
 import GoHome from "../../components/goHome/GoHome";
+import ScrollToTopAndBottom from "../../components/ScrollToTopAndBottom/ScrollToTopAndBottom";
+import Footer from "../../components/footer/Footer";
+import dividerTop from '../../assets/images/divider-round-top.svg';
 
 
 const Main = () => {
 
     return (
         <div className="main">
+            <ScrollToTopAndBottom />
             <SidebarToggler />
                 <BrowserRouter>
                     <BubblyContainer />
@@ -39,6 +43,8 @@ const Main = () => {
                         <Route path="*" element={<>No Match</>} />
                         </Route>
                     </Routes>
+                    <img className='divider_rounded_top' src={ dividerTop } alt="divider-rounded-top" />
+                    <Footer />
                 </BrowserRouter>
         </div>
     )
